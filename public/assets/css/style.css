@@ -38,3 +38,9 @@ header .navbar {
         transform: rotate(360deg);
     }
 }
+
+.show-hide-message.ng-hide-remove{
+    -webkit-animation: zoomIn 0.3s both ease;
+    -moze-animation: zoomIn 0.3s both ease;
+    animation: zoomIn 0.3s both ease;
+}
