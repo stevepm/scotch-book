@@ -8,9 +8,11 @@ angular.module('mainCtrl', [])
             vm.loggedIn = Auth.isLoggedIn();
         });
         // get user information on page load
-        Auth.getUser().success(function (data) {
-            vm.user = data;
-        });
+        if (vm.loggedIn) {
+            Auth.getUser().success(function (data) {
+                vm.user = data;
+            });
+        }
         // function to handle login form
         vm.doLogin = function () {
 
